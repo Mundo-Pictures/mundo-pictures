@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,15 +12,21 @@ class HomePage extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'img/brainflix-logo.png',
+            SvgPicture.asset(
+              "/svg/hatchet.svg",
               width: 25,
             ),
-            SizedBox(width: 10),
+            SizedBox(width: 5),
             Text(
-              "BrainFlix",
+              "Mundo Pictures",
               style: TextStyle(fontWeight: FontWeight.bold),
-            )
+            ),
+            Transform.translate(
+                offset: const Offset(-5, 0),
+                child: SvgPicture.asset(
+                  "/svg/play-button.svg",
+                  width: 40,
+                )),
           ],
         ),
         centerTitle: true,
