@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -37,9 +39,35 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-              color: Colors.brown[200],
-              padding: EdgeInsets.all(20),
-              child: const Text("search bar")),
+              padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: TextField(
+                        style: TextStyle(color: Color(0xff4d2773)),
+                        textAlign: TextAlign.left,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          hintText: "TextField",
+                          hintStyle: TextStyle(color: Color(0xff4d2773)),
+                          fillColor: Color(0xffb0c0ba),
+                          filled: true,
+                        )),
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.asset(
+                      "./img/Genesis_img.jpg",
+                      width: 60,
+                    ),
+                  ),
+                ],
+              )),
           Container(
             color: Colors.brown[300],
             padding: EdgeInsets.all(20),
