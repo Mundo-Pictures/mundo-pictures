@@ -6,6 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  void uploadButtonHandler() {
+    var something = "something";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,9 +73,35 @@ class HomePage extends StatelessWidget {
                 ],
               )),
           Container(
-            color: Colors.brown[300],
-            padding: EdgeInsets.all(20),
-            child: const Text("upload"),
+            padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+            child: ElevatedButton(
+                onPressed: uploadButtonHandler,
+                style: ButtonStyle(
+                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    )),
+                    padding: WidgetStateProperty.all<EdgeInsets>(
+                      EdgeInsets.all(20),
+                    ),
+                    backgroundColor:
+                        WidgetStateProperty.all(Color(0xffff9800))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.upload_sharp,
+                      size: 18,
+                      color: Color(0xff4d2773),
+                    ),
+                    Text(
+                      "HACK IT UP",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff4d2773)),
+                    )
+                  ],
+                )),
           )
         ],
       ),
