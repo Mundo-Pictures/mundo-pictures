@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           "/": (BuildContext build) => HomePage(),
         },
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff4d2773)),
           scaffoldBackgroundColor: Color(0xff4d2773),
           useMaterial3: true,
           textTheme: TextTheme(
