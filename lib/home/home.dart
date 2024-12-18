@@ -2,12 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mundo_pictures/buttons/primary-button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   void uploadButtonHandler() {
-    var something = "something";
+    String something = "something";
   }
 
   @override
@@ -73,36 +74,25 @@ class HomePage extends StatelessWidget {
                 ],
               )),
           Container(
-            padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-            child: ElevatedButton(
-                onPressed: uploadButtonHandler,
-                style: ButtonStyle(
-                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    )),
-                    padding: WidgetStateProperty.all<EdgeInsets>(
-                      EdgeInsets.all(20),
-                    ),
-                    backgroundColor:
-                        WidgetStateProperty.all(Color(0xffff9800))),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.upload_sharp,
-                      size: 18,
-                      color: Color(0xff4d2773),
-                    ),
-                    Text(
-                      "HACK IT UP",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xff4d2773)),
-                    )
-                  ],
-                )),
-          )
+              padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+              child: PrimaryButton(
+                  onPressedAction: uploadButtonHandler,
+                  childWidget: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.upload_sharp,
+                        size: 18,
+                        color: Color(0xff4d2773),
+                      ),
+                      Text(
+                        "HACK IT UP",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff4d2773)),
+                      )
+                    ],
+                  )))
         ],
       ),
     );
