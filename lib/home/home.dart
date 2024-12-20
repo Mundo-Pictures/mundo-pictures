@@ -1,8 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mundo_pictures/buttons/primary-button.dart';
+import 'package:mundo_pictures/components/comments.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -92,7 +91,14 @@ class HomePage extends StatelessWidget {
                             color: Color(0xff4d2773)),
                       )
                     ],
-                  )))
+                  ))),
+          Container(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Comments(),
+            ],
+          ))
         ],
       ),
     );
