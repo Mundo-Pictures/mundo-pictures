@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mundo_pictures/buttons/primary-button.dart';
 import 'package:mundo_pictures/components/data/comment_data.dart';
+import 'package:mundo_pictures/textfields/primary-textfields.dart';
 
 class Comments extends StatefulWidget {
   const Comments({super.key});
@@ -50,61 +52,19 @@ class _CommentsState extends State<Comments> {
                       width: 25,
                     ),
                     Expanded(
-                      child: TextField(
-                          style: TextStyle(color: Color(0xff4d2773)),
-                          textAlign: TextAlign.left,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(8),
-                                borderSide: BorderSide(
-                                    width: 2,
-                                    color: Color.fromRGBO(255, 152, 0, 1))),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    width: 2,
-                                    color: Color.fromRGBO(255, 152, 0, 1))),
-                            hintText: "Comment...",
-                            hintStyle: TextStyle(color: Color(0xff4d2773)),
-                            label: Text(
-                              "CHOP IT UP",
-                              style: TextStyle(
-                                  color: Color.fromRGBO(255, 152, 0, 1),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                  shadows: [
-                                    Shadow(
-                                        offset: Offset(2, 2),
-                                        blurRadius: 0,
-                                        color: Color(0xff4d2773))
-                                  ]),
-                            ),
-                            fillColor: Color(0xffb0c0ba),
-                            filled: true,
-                          )),
-                    ),
+                        child: PrimaryTextField(
+                            hintText: "Comment...", labelText: "CHOP IT UP")),
                   ],
                 ),
-                ElevatedButton(
-                    onPressed: HandleAddComment,
-                    style: ButtonStyle(
-                        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        )),
-                        padding: WidgetStateProperty.all<EdgeInsets>(
-                          EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        ),
-                        backgroundColor:
-                            WidgetStateProperty.all(Color(0xffff9800))),
-                    child: Text(
-                      "Comment",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xff4d2773)),
-                    ))
+                PrimaryButton(
+                  onPressedAction: HandleAddComment,
+                  childWidget: Text(
+                    "Comment",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600, color: Color(0xff4d2773)),
+                  ),
+                  buttonPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                )
               ],
             ),
           ),
