@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mundo_pictures/buttons/primary-button.dart';
+import 'package:mundo_pictures/components/comments.dart';
+import 'package:mundo_pictures/textfields/primary-textfields.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -48,18 +49,8 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
-                    child: TextField(
-                        style: TextStyle(color: Color(0xff4d2773)),
-                        textAlign: TextAlign.left,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          hintText: "TextField",
-                          hintStyle: TextStyle(color: Color(0xff4d2773)),
-                          fillColor: Color(0xffb0c0ba),
-                          filled: true,
-                        )),
-                  ),
+                      child: PrimaryTextField(
+                          hintText: "Search...", labelText: "Search")),
                   SizedBox(
                     width: 25,
                   ),
@@ -91,7 +82,14 @@ class HomePage extends StatelessWidget {
                             color: Color(0xff4d2773)),
                       )
                     ],
-                  )))
+                  ))),
+          Container(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Comments(),
+            ],
+          ))
         ],
       ),
     );
