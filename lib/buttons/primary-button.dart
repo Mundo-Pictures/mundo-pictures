@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
-      {super.key, required this.onPressedAction, required this.childWidget});
+      {super.key,
+      required this.onPressedAction,
+      required this.childWidget,
+      this.buttonPadding = const EdgeInsets.all(20)});
 
   final void Function() onPressedAction;
   final Widget childWidget;
+  final EdgeInsets buttonPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class PrimaryButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             )),
             padding: WidgetStateProperty.all<EdgeInsets>(
-              EdgeInsets.all(20),
+              buttonPadding,
             ),
             backgroundColor: WidgetStateProperty.all(Color(0xffff9800))),
         child: childWidget);
