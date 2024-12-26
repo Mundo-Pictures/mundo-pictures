@@ -12,18 +12,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         initialRoute: "/",
         routes: {
           "/": (BuildContext build) => HomePage(),
         },
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF4CAF50)),
+          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff4d2773)),
+          scaffoldBackgroundColor: Color(0xff4d2773),
           useMaterial3: true,
           textTheme: TextTheme(
             bodyMedium: TextStyle(
               fontSize: 18,
-              color: Colors.grey[800],
+              color: Color(0xffb0c0ba),
             ),
           ),
         ));
