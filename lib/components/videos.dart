@@ -21,9 +21,25 @@ class _VideosState extends State<Videos> {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: _controller.value.aspectRatio,
-      child: VideoPlayer(_controller));  }
+    return Column(
+      children: [
+        Stack(
+            children:[
+              Center(child: _controller.value.isInitialized
+            ? AspectRatio(aspectRatio: _controller.value.aspectRatio,
+            child:VideoPlayer(_controller),): Container(),),
+            FloatingActionButton(onPressed:(){
+              setState((){
+                _controller.value.isPlaying?_controller.pause():_controller.play();
+              });
+            },
+            child:Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow,)
+          ),
+      ],
+    ),
+    Container(
+      )]);
+    }
 
   @override
   void dispose() {
