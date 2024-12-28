@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mundo_pictures/buttons/primary-button.dart';
+import 'package:mundo_pictures/styles/buttons/primary-button.dart';
 import 'package:mundo_pictures/components/comments.dart';
 import 'package:mundo_pictures/components/videos.dart';
-import 'package:mundo_pictures/textfields/primary-textfields.dart';
+import 'package:mundo_pictures/styles/textfields/primary-textfields.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

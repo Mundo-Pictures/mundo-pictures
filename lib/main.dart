@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mundo_pictures/home/home.dart';
+import 'package:mundo_pictures/styles/colors/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,11 +25,15 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xff4d2773),
           useMaterial3: true,
           textTheme: TextTheme(
-            bodyMedium: TextStyle(
-              fontSize: 18,
-              color: Color(0xffb0c0ba),
-            ),
-          ),
-        ));
+              bodyMedium: TextStyle(
+                fontSize: 18,
+                color: Color(0xffb0c0ba),
+              ),
+              titleLarge: GoogleFonts.dmSerifText(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: AppColor.tertiaryColor,)
+              )),
+        );
   }
 }

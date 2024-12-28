@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:styled_divider/styled_divider.dart';
+import 'package:mundo_pictures/styles/colors/colors.dart';
 import 'package:video_player/video_player.dart';
 
 class Videos extends StatefulWidget {
@@ -28,7 +30,7 @@ class _VideosState extends State<Videos> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width:screenWidth*0.7,
+            width: screenWidth * 0.7,
             child: Stack(
               children: [
                 Center(
@@ -48,7 +50,9 @@ class _VideosState extends State<Videos> {
                       });
                     },
                     child: Icon(
-                      _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                      _controller.value.isPlaying
+                          ? Icons.pause
+                          : Icons.play_arrow,
                     )),
               ],
             ),
@@ -56,11 +60,29 @@ class _VideosState extends State<Videos> {
         ],
       ),
       SizedBox(
-        width:screenWidth*0.7,
+        width: screenWidth * 0.7,
         child: Container(
-          height: 360,
-          decoration: BoxDecoration(color: Colors.red),
-        ),
+            height: 360,
+            decoration: BoxDecoration(color: AppColor.secondaryColor),
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                children: [
+                  Text("3 Minute Mundo Guide - A Guide for League of Legends",
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge!
+                          .copyWith(letterSpacing: 1)),
+                  StyledDivider(
+                    color: AppColor.tertiaryColor,
+                    thickness: 2,
+                    indent: 50,
+                    endIndent: 50,
+                    lineStyle: DividerLineStyle.dashed,
+                  )
+                ],
+              ),
+            )),
       )
     ]);
   }
