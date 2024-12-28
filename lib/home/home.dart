@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                       )
                     ],
                   ))),
-          Videos(),        
+          Videos(),
           Container(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

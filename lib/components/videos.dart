@@ -21,25 +21,49 @@ class _VideosState extends State<Videos> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-            children:[
-              Center(child: _controller.value.isInitialized
-            ? AspectRatio(aspectRatio: _controller.value.aspectRatio,
-            child:VideoPlayer(_controller),): Container(),),
-            FloatingActionButton(onPressed:(){
-              setState((){
-                _controller.value.isPlaying?_controller.pause():_controller.play();
-              });
-            },
-            child:Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow,)
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    return Column(children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            width:screenWidth*0.7,
+            child: Stack(
+              children: [
+                Center(
+                  child: _controller.value.isInitialized
+                      ? AspectRatio(
+                          aspectRatio: _controller.value.aspectRatio,
+                          child: VideoPlayer(_controller),
+                        )
+                      : Container(),
+                ),
+                FloatingActionButton(
+                    onPressed: () {
+                      setState(() {
+                        _controller.value.isPlaying
+                            ? _controller.pause()
+                            : _controller.play();
+                      });
+                    },
+                    child: Icon(
+                      _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                    )),
+              ],
+            ),
           ),
-      ],
-    ),
-    Container(
-      )]);
-    }
+        ],
+      ),
+      SizedBox(
+        width:screenWidth*0.7,
+        child: Container(
+          height: 360,
+          decoration: BoxDecoration(color: Colors.red),
+        ),
+      )
+    ]);
+  }
 
   @override
   void dispose() {
