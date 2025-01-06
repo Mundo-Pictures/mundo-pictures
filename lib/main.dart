@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
                 fontSize: 18,
                 color: Color(0xffb0c0ba),
               ),
+              titleSmall: GoogleFonts.dmSerifText(
+                fontSize: 16
+              ),
               titleLarge: GoogleFonts.dmSerifText(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,

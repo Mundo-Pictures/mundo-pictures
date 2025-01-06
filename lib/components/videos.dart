@@ -79,7 +79,30 @@ class _VideosState extends State<Videos> {
                     indent: 50,
                     endIndent: 50,
                     lineStyle: DividerLineStyle.dashed,
-                  )
+                  ),
+                  SizedBox(
+                    width: screenWidth * 0.5,
+                    child: Row(
+                      children:[
+                        Text("3 Minute League of Legends", style: Theme.of(context).textTheme.titleSmall!.copyWith(letterSpacing:1, color: Color(0xffff9800))),
+                        Row(children: [
+                          Icon(Icons.visibility),
+                          Text("980,000"),
+                        ],)
+                      ]
+                    ),
+                  ),
+                  Row(children: [
+                    Text("08/08/2023"),
+                    Row(children: [Icon(Icons.favorite_border), Text("22,000")],)
+                  ],),
+                  StyledDivider(
+                    color: AppColor.tertiaryColor,
+                    thickness: 2,
+                    indent: 50,
+                    endIndent: 50,
+                    lineStyle: DividerLineStyle.dashed,
+                  ),
                 ],
               ),
             )),
