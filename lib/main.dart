@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mundo_pictures/home/home.dart';
 import 'package:mundo_pictures/styles/colors/colors.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SemanticsBinding.instance.ensureSemantics();
   runApp(const MyApp());
 }
 
@@ -30,12 +33,17 @@ class MyApp extends StatelessWidget {
                 color: Color(0xffb0c0ba),
               ),
               titleSmall: GoogleFonts.dmSerifText(
-                fontSize: 16
+                fontSize: 16,
+                fontWeight: FontWeight.w600
               ),
               titleLarge: GoogleFonts.dmSerifText(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
-                color: AppColor.tertiaryColor,)
+                color: AppColor.tertiaryColor,),
+                labelLarge: GoogleFonts.dmSans(
+                  fontSize:16,
+                  fontWeight: FontWeight.w400,
+                )
               )),
         );
   }

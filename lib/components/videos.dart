@@ -30,7 +30,7 @@ class _VideosState extends State<Videos> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: screenWidth * 0.7,
+            width: screenWidth * 0.9,
             child: Stack(
               children: [
                 Center(
@@ -60,19 +60,19 @@ class _VideosState extends State<Videos> {
         ],
       ),
       SizedBox(
-        width: screenWidth * 0.7,
+        width: screenWidth * 0.9,
         child: Container(
             height: 360,
-            decoration: BoxDecoration(color: AppColor.secondaryColor),
+            decoration: BoxDecoration(color: AppColor.primaryPurple),
             child: Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.all(12.0),
               child: Column(
                 children: [
                   Text("3 Minute Mundo Guide - A Guide for League of Legends",
                       style: Theme.of(context)
                           .textTheme
                           .titleLarge!
-                          .copyWith(letterSpacing: 1)),
+                          .copyWith(letterSpacing: 1, fontSize: 20)),
                   StyledDivider(
                     color: AppColor.tertiaryColor,
                     thickness: 2,
@@ -80,22 +80,61 @@ class _VideosState extends State<Videos> {
                     endIndent: 50,
                     lineStyle: DividerLineStyle.dashed,
                   ),
-                  SizedBox(
-                    width: screenWidth * 0.5,
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: FractionallySizedBox(
+                            widthFactor: 0.7,
+                            child: Text("3 Minute League of Legends",
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall!
+                                    .copyWith(
+                                        letterSpacing: 1,
+                                        color: AppColor.primaryOrange)),
+                          ),
+                        ),
+                        Expanded(
+                          child: Row(
+                            children: [
+                              Icon(Icons.visibility,
+                                  color: AppColor.secondaryPurple),
+                              Text("980,000",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .labelLarge!
+                                      .copyWith(
+                                          color: AppColor.secondaryPurple)),
+                            ],
+                          ),
+                        )
+                      ]),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(
+                        top: 16, start: 24, end: 40),
                     child: Row(
-                      children:[
-                        Text("3 Minute League of Legends", style: Theme.of(context).textTheme.titleSmall!.copyWith(letterSpacing:1, color: Color(0xffff9800))),
-                        Row(children: [
-                          Icon(Icons.visibility),
-                          Text("980,000"),
-                        ],)
-                      ]
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("08/08/2023", style: Theme.of(context)
+                                    .textTheme
+                                    .labelLarge!
+                                    .copyWith(color: AppColor.secondaryPurple)),
+                        Row(
+                          children: [
+                            Icon(Icons.favorite_border,
+                                color: AppColor.secondaryPurple),
+                            Text("22,000",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelLarge!
+                                    .copyWith(color: AppColor.secondaryPurple))
+                          ],
+                        )
+                      ],
                     ),
                   ),
-                  Row(children: [
-                    Text("08/08/2023"),
-                    Row(children: [Icon(Icons.favorite_border), Text("22,000")],)
-                  ],),
                   StyledDivider(
                     color: AppColor.tertiaryColor,
                     thickness: 2,
