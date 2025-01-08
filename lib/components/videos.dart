@@ -74,7 +74,7 @@ class _VideosState extends State<Videos> {
                           .titleLarge!
                           .copyWith(letterSpacing: 1, fontSize: 20)),
                   StyledDivider(
-                    color: AppColor.tertiaryColor,
+                    color: AppColor.primaryGray,
                     thickness: 2,
                     indent: 50,
                     endIndent: 50,
@@ -96,8 +96,11 @@ class _VideosState extends State<Videos> {
                                         color: AppColor.primaryOrange)),
                           ),
                         ),
-                        Expanded(
+                        Padding(
+                          padding: const EdgeInsetsDirectional.only(
+                              top: 16, start: 24, end: 32),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Icon(Icons.visibility,
                                   color: AppColor.secondaryPurple),
@@ -113,15 +116,17 @@ class _VideosState extends State<Videos> {
                       ]),
                   Padding(
                     padding: const EdgeInsetsDirectional.only(
-                        top: 16, start: 24, end: 40),
+                        top: 16, start: 24, end: 32),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("08/08/2023", style: Theme.of(context)
-                                    .textTheme
-                                    .labelLarge!
-                                    .copyWith(color: AppColor.secondaryPurple)),
+                        Text("08/08/2023",
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge!
+                                .copyWith(color: AppColor.secondaryPurple)),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Icon(Icons.favorite_border,
                                 color: AppColor.secondaryPurple),
@@ -136,12 +141,16 @@ class _VideosState extends State<Videos> {
                     ),
                   ),
                   StyledDivider(
-                    color: AppColor.tertiaryColor,
+                    color: AppColor.primaryGray,
                     thickness: 2,
                     indent: 50,
                     endIndent: 50,
                     lineStyle: DividerLineStyle.dashed,
                   ),
+                  Text("Got 3 minutes spare? Why not take a quick look at how to play Dr Mundo Top Lane!",style: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge
+                                    )
                 ],
               ),
             )),

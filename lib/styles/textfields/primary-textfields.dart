@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mundo_pictures/styles/colors/colors.dart';
 
 class PrimaryTextField extends StatelessWidget {
   const PrimaryTextField(
@@ -38,7 +39,7 @@ class PrimaryTextField extends StatelessWidget {
                       color: Color(0xff4d2773))
                 ]),
           ),
-          fillColor: Color(0xffb0c0ba),
+          fillColor: AppColor.primaryGray,
           filled: true,
         ));
   }

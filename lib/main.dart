@@ -32,6 +32,11 @@ class MyApp extends StatelessWidget {
                 fontSize: 18,
                 color: Color(0xffb0c0ba),
               ),
+              bodyLarge: GoogleFonts.dmSans(
+fontSize: 16,
+fontWeight: FontWeight.w400,
+color: AppColor.primaryGray,
+              ),
               titleSmall: GoogleFonts.dmSerifText(
                 fontSize: 16,
                 fontWeight: FontWeight.w600
@@ -39,7 +44,7 @@ class MyApp extends StatelessWidget {
               titleLarge: GoogleFonts.dmSerifText(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
-                color: AppColor.tertiaryColor,),
+                color: AppColor.primaryGray,),
                 labelLarge: GoogleFonts.dmSans(
                   fontSize:16,
                   fontWeight: FontWeight.w400,
