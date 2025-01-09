@@ -84,10 +84,9 @@ class _VideosState extends State<Videos> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
-                          child: FractionallySizedBox(
-                            widthFactor: 0.7,
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.only(start: 24),
                             child: Text("3 Minute League of Legends",
-                                textAlign: TextAlign.center,
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleSmall!
