@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mundo_pictures/styles/buttons/primary-button.dart';
 import 'package:mundo_pictures/components/comments.dart';
 import 'package:mundo_pictures/components/videos.dart';
+import 'package:mundo_pictures/components/'
 import 'package:mundo_pictures/styles/textfields/primary-textfields.dart';
 
 class HomePage extends StatelessWidget {
