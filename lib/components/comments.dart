@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mundo_pictures/buttons/primary-button.dart';
+import 'package:mundo_pictures/styles/buttons/primary-button.dart';
 import 'package:mundo_pictures/components/data/comment_data.dart';
-import 'package:mundo_pictures/textfields/primary-textfields.dart';
+import 'package:mundo_pictures/styles/textfields/primary-textfields.dart';
 
 class Comments extends StatefulWidget {
   const Comments({super.key});
