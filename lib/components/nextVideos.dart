@@ -30,7 +30,7 @@ class _VideoThumbnailsState extends State<VideoThumbnails> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: screenWidth * 0.3,
+            width: screenWidth * 0.5,
             child: Stack(
               children: [
                 Center(
@@ -86,28 +86,52 @@ class _NextVideosState extends State<NextVideos> {
       for (int i = 0; i < allVideosList.length; i++)
         Column(
           children: [
-            Container(
-              width: screenWidth*0.9,
-              color: AppColor.secondaryPurple,
-              padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-              child: Column(children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    VideoThumbnails(),
-                    Text(
-                      allVideosList.getList()[i].title,
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16),
-                    ),
-                    Text(allVideosList.getList()[i].author,
-                        style: TextStyle(color: Colors.black, fontSize: 14))
-                  ],
-                ),
-              ]),
+            Padding(
+              padding: const EdgeInsetsDirectional.only(
+                  start: 18.0, end: 18, bottom: 16),
+              child: Container(
+                color: AppColor.secondaryPurple,
+                child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      VideoThumbnails(),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.only(start: 8),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.only(bottom:4),
+                                child: Text(
+                                  allVideosList.getList()[i].title,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleSmall!
+                                      .copyWith(
+                                        color: AppColor.primaryGray,
+                                        letterSpacing: 1,
+                                        fontSize: 14,
+                                      ),
+                                ),
+                              ),
+                              Text(
+                                allVideosList.getList()[i].author,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(
+                                        color: AppColor.primaryOrange,
+                                        fontSize: 14),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ]),
+              ),
             ),
           ],
         ),

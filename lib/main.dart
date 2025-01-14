@@ -48,9 +48,11 @@ class MyApp extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
               ),
-              headlineLarge: GoogleFonts.dmSerifText(fontSize:32,
-              fontWeight:FontWeight.w600,
-              color:AppColor.primaryGray,))),
+              headlineLarge: GoogleFonts.dmSerifText(
+                fontSize: 32,
+                fontWeight: FontWeight.w600,
+                color: AppColor.primaryGray,
+              ))),
     );
   }
 }
