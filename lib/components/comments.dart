@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mundo_pictures/styles/buttons/primary-button.dart';
 import 'package:mundo_pictures/components/data/comment_data.dart';
 import 'package:mundo_pictures/styles/textfields/primary-textfields.dart';
+import 'package:mundo_pictures/styles/colors/colors.dart';
 
 class Comments extends StatefulWidget {
   const Comments({super.key});
@@ -61,7 +62,7 @@ class _CommentsState extends State<Comments> {
                   childWidget: Text(
                     "Comment",
                     style: TextStyle(
-                        fontWeight: FontWeight.w600, color: Color(0xff4d2773)),
+                        fontWeight: FontWeight.w600, color: AppColor.primaryPurple),
                   ),
                   buttonPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 )
@@ -71,7 +72,7 @@ class _CommentsState extends State<Comments> {
           Container(
             padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: Divider(
-              color: Color.fromRGBO(255, 152, 0, 1),
+              color: AppColor.primaryOrange,
               thickness: 2,
             ),
           ),
@@ -79,7 +80,7 @@ class _CommentsState extends State<Comments> {
             Column(
               children: [
                 Container(
-                  color: Color.fromRGBO(224, 149, 233, 1),
+                  color: AppColor.tertiaryPurple,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Column(children: [
@@ -113,7 +114,7 @@ class _CommentsState extends State<Comments> {
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Divider(
-                    color: Color.fromRGBO(255, 152, 0, 1),
+                    color: AppColor.primaryOrange,
                     thickness: 2,
                   ),
                 ),

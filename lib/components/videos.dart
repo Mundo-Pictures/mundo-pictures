@@ -63,7 +63,7 @@ class _VideosState extends State<Videos> {
         width: screenWidth * 0.9,
         child: Container(
             height: 360,
-            decoration: BoxDecoration(color: AppColor.primaryPurple),
+            decoration: BoxDecoration(color: AppColor.secondaryPurple),
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(
@@ -102,13 +102,13 @@ class _VideosState extends State<Videos> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Icon(Icons.visibility,
-                                  color: AppColor.secondaryPurple),
+                                  color: AppColor.tertiaryPurple),
                               Text("980,000",
                                   style: Theme.of(context)
                                       .textTheme
                                       .labelLarge!
                                       .copyWith(
-                                          color: AppColor.secondaryPurple)),
+                                          color: AppColor.tertiaryPurple)),
                             ],
                           ),
                         )
@@ -123,7 +123,7 @@ class _VideosState extends State<Videos> {
                             style: Theme.of(context)
                                 .textTheme
                                 .labelLarge!
-                                .copyWith(color: AppColor.secondaryPurple)),
+                                .copyWith(color: AppColor.tertiaryPurple)),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -133,7 +133,7 @@ class _VideosState extends State<Videos> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .labelLarge!
-                                    .copyWith(color: AppColor.secondaryPurple))
+                                    .copyWith(color: AppColor.tertiaryPurple))
                           ],
                         )
                       ],
