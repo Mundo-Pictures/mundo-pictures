@@ -17,39 +17,42 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        initialRoute: "/",
-        routes: {
-          "/": (BuildContext build) => HomePage(),
-        },
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff4d2773)),
-          scaffoldBackgroundColor: Color(0xff4d2773),
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      initialRoute: "/",
+      routes: {
+        "/": (BuildContext build) => HomePage(),
+      },
+      theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryPurple),
+          scaffoldBackgroundColor: AppColor.primaryPurple,
           useMaterial3: true,
           textTheme: TextTheme(
               bodyMedium: TextStyle(
                 fontSize: 18,
-                color: Color(0xffb0c0ba),
+                color: AppColor.primaryGray,
               ),
               bodyLarge: GoogleFonts.dmSans(
-fontSize: 16,
-fontWeight: FontWeight.w400,
-color: AppColor.primaryGray,
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: AppColor.primaryGray,
               ),
               titleSmall: GoogleFonts.dmSerifText(
-                fontSize: 16,
-                fontWeight: FontWeight.w600
-              ),
+                  fontSize: 16, fontWeight: FontWeight.w600),
               titleLarge: GoogleFonts.dmSerifText(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
-                color: AppColor.primaryGray,),
-                labelLarge: GoogleFonts.dmSans(
-                  fontSize:16,
-                  fontWeight: FontWeight.w400,
-                )
-              )),
-        );
+                color: AppColor.primaryGray,
+              ),
+              labelLarge: GoogleFonts.dmSans(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+              ),
+              headlineLarge: GoogleFonts.dmSerifText(
+                fontSize: 32,
+                fontWeight: FontWeight.w600,
+                color: AppColor.primaryGray,
+              ))),
+    );
   }
 }
